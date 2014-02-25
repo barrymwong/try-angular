@@ -1,0 +1,34 @@
+<div class="col-right">
+	<h2>Right</h2>
+
+	<div ng-controller="CatsCtrl">
+		<input type="text" ng-model="search">
+		<ul>
+			<li ng-repeat="cat in cats | filter: search">
+				{{cat.name}} {{cat.mood}}
+			</li>
+			<li my-dir></li>
+		</ul>
+		<button ng-click="alert(search)">Alert</button>
+
+		<div ng-controller="TimerCtrl">
+			<button ng-click="timer()">Timer {{time}}</button>
+		</div>
+
+		<div ng-controller="FirstCtrl">
+			<input type="text" ng-model="data.message">
+			<h2>{{data.message}}</h2>
+		</div>
+		<div ng-controller="SecondCtrl">
+			<input type="text" ng-model="data.message">
+			<h2>{{data.message | reverse}}</h2>
+		</div>
+
+	</div>
+
+	<div ng-controller="UnderscoreCtrl">
+		<h2>Underscore</h2>
+		{{each}}
+	</div>
+
+</div>
